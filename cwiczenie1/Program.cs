@@ -15,8 +15,12 @@ namespace Zad3Kalkulator
             Console.WriteLine("Podaj proszę 2 liczbę:");
 
             var liczba2 = int.Parse(Console.ReadLine());
-
-            var wynik = liczba1 * liczba2;
+            Console.WriteLine("Wpisz '+' lub '-'");
+            var operacja = Console.ReadLine();
+            var wynik = 0;
+            if ("+".Equals(operacja)) wynik = liczba1 + liczba2;
+            else if ("-".Equals(operacja)) wynik = liczba1 - liczba2;
+            else Console.WriteLine("Zły znak!");
 
             Console.WriteLine($"Wynik Twojego działania to: {wynik}.");
         }
